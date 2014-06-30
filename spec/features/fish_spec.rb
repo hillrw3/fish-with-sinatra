@@ -15,5 +15,10 @@ feature "Fish Page" do
     expect(page).to have_link("Shark")
   end
 
+  scenario "Return to homepage" do
+    visit "/fish/0"
+    click_on "Back to homepage"
+    expect(page).to have_content("Fish Homepage")
+  end
 
 end
