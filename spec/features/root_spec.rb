@@ -11,6 +11,11 @@ feature "Homepage" do
     expect(page).to have_content("Shark")
     expect(page).to have_content("Tuna")
   end
-  
+
+  scenario "should have links to fish facts" do
+    visit "/"
+    # save_and_open_page
+    expect(page).to have_link("Shark")
+  end
 
 end

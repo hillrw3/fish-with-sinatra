@@ -1,7 +1,7 @@
 <h1>Fish Homepage</h1>
 
 <ul>
-<%@fish.each do |fish| %>
-  <li><%=fish%></li>
-<%end%>
+  <%@fish.each_with_index do |fish, index| %>
+    <a href="/fish/<%=index%>"><li><%=fish[:name]%></li></a>
+  <%end%>
 </ul>
