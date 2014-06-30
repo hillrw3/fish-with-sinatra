@@ -19,5 +19,17 @@ class FishApp < Sinatra::Base
     erb :fish
   end
 
+  get '/newfish' do
+    erb :new_fish
+  end
+
+  post '/create_new_fish' do
+    name = params[:name]
+    watertype = params[:watertype]
+    description = params[:description]
+    imageurl = params[:imageurl]
+    @fish << {name: name, water_type: watertype, image: imageurl, description: description}
+    redirect("/fish/#{@fish.size-1}")
+  end
 
 end

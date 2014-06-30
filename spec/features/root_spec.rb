@@ -1,20 +1,20 @@
 require "spec_helper"
 
 feature "Homepage" do
-  scenario "should have a page header" do
+  before(:each) do
     visit "/"
+  end
+
+  scenario "should have a page header" do
     expect(page).to have_content("Fish Homepage")
   end
 
   scenario "should have a list of fish" do
-    visit "/"
     expect(page).to have_content("Shark")
     expect(page).to have_content("Tuna")
   end
 
   scenario "should have links to fish facts" do
-    visit "/"
-    # save_and_open_page
     expect(page).to have_link("Shark")
   end
 
