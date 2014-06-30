@@ -18,4 +18,8 @@ feature "Homepage" do
     expect(page).to have_link("Shark")
   end
 
+  scenario "should have a search button" do
+    expect(page).to have_button("Search for a fish")
+  end
+
 end

@@ -23,6 +23,16 @@ class FishApp < Sinatra::Base
     erb :new_fish
   end
 
+  get '/find_fish' do
+    fish_name = params[:search]
+    all_fish_names = @fish.each do |fish|
+      fish[:name]
+    end
+    if all_fish_names.include?(fish_name)
+      
+    end
+  end
+
   post '/create_new_fish' do
     name = params[:name]
     watertype = params[:watertype]
