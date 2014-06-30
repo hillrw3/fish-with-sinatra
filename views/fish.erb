@@ -1,5 +1,5 @@
 <h1>Fish Details</h1>
-<h2><%= @specific_fish[:name] %></h2>
+<a href="http://en.wikipedia.org/wiki/<%= @specific_fish[:name]%>"><h2><%= @specific_fish[:name] %></h2></a>
 <p>Description: <%= @specific_fish[:description]%></p>
 <p>Water Type: <%=@specific_fish[:water_type]%></p>
 <img width="20%" height="20%" src="<%= @specific_fish[:image]%>" alt="<%= @specific_fish[:name]%>"/>
